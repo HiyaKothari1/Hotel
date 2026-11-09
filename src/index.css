@@ -182,6 +182,22 @@ img { max-width: 100%; display: block; }
   border-top: 1px solid rgba(43,27,18,.12);
   box-shadow: 0 -6px 18px rgba(43,27,18,.08);
 }
+.map-section {
+  padding: 24px 16px 0;
+  background: #fbf1e6;
+}
+
+.map-container {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(43, 27, 18, 0.15);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 280px;
+  display: block;
+}
 .find-info { display: flex; align-items: center; gap: 10px; min-width: 0; }
 .find-info .pin { font-size: 1.5rem; flex: none; }
 .find-info strong { display: block; line-height: 1.2; }
