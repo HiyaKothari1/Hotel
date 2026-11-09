@@ -5,9 +5,7 @@ export default function QuoteBanner() {
   return (
     <section
       className="quote-banner"
-      style={{
-        backgroundImage: photoBg(images.fort, "linear-gradient(120deg,#3a2618,#8a6238)"),
-      }}
+      style={{ backgroundImage: "linear-gradient(120deg,#3a2618,#8a6238)" }}
     >
       <p>“{hotel.quote}”</p>
       <hr />
