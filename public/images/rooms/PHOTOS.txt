@@ -1,0 +1,11 @@
+Save each room's photos in THIS folder with exactly these names (.jpg):
+
+Suite              suite-1.jpg (already added), suite-2.jpg
+Super Suite        super-suite-1.jpg, super-suite-2.jpg, super-suite-3.jpg
+Large Twin Room    large-twin-1.jpg, large-twin-2.jpg, large-twin-3.jpg
+Superior King      superior-king-1.jpg, superior-king-2.jpg, superior-king-3.jpg
+Family Double      family-double-1.jpg, family-double-2.jpg
+Classic Quadruple  classic-quadruple-1.jpg, classic-quadruple-2.jpg, classic-quadruple-3.jpg
+
+The first photo of each room is also the picture on the room card.
+Keep every photo under ~300 KB (squoosh.app) so the site opens fast on mobile.

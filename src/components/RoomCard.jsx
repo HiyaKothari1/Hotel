@@ -1,31 +1,29 @@
-import { hotel } from "../data/site.js";
 import { photoBg } from "../utils.js";
 
-export default function RoomCard({ room }) {
-  const message = encodeURIComponent(`Hi, I want to book a ${room.name}`);
+export default function RoomCard({ room, onSelect }) {
+  const cardPhoto = room.thumb || room.images?.[0];
+  const background = cardPhoto ? photoBg(cardPhoto, room.fallback) : room.fallback;
 
   return (
-    <article className="room-card">
+    <article className="room-card" onClick={() => onSelect(room)}>
       <div
         className="room-img"
-        style={{ backgroundImage: photoBg(room.image, room.fallback) }}
+        style={{ backgroundImage: background, backgroundPosition: room.focus || "center" }}
         role="img"
         aria-label={room.name}
       />
       <div className="room-body">
         <h3>{room.name}</h3>
-        <p>{room.description}</p>
+        <p>{room.tagline}</p>
         <div className="room-foot">
           <strong>₹{room.price.toLocaleString("en-IN")} / night</strong>
-          <a
+          <button
+            type="button"
             className="arrow"
-            href={`https://wa.me/${hotel.phone}?text=${message}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`Book ${room.name}`}
+            aria-label={`View ${room.name} details`}
           >
             →
-          </a>
+          </button>
         </div>
       </div>
     </article>
