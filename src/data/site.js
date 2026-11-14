@@ -23,28 +23,40 @@ export const heroSlides = [
 /* Nearby attractions shown in the "Why Stay Here" section */
 export const attractions = [
   {
-    
+    icon: "🕌",
     title: "Ajmer Dargah Sharif",
     detail: "Less than 1 km away",
-    photos: ["dargah-1.jpg", "dargah-2.jpg"],
+    photos: ["dargah-1.jpg", "dargah-2.jpg", "dargah-3.jpg"],
   },
   {
-    
+    icon: "🌊",
     title: "Ana Sagar Lake",
     detail: "Just 0.5 km away",
-    photos: [ "anasagar-2.jpg", "anasagar-3.jpg"],
+    photos: ["anasagar-1.jpg", "anasagar-2.jpg", "anasagar-3.jpg"],
   },
   {
-    
+    icon: "🛍️",
     title: "Mittal Mall",
     detail: "Less than 2 km away",
     photos: ["mittal-mall-1.jpg"],
   },
   {
-    
+    icon: "🚆",
+    title: "Ajmer Railway Station",
+    detail: "Less than 2 km away",
+    photos: ["railway-1.jpg"],
+  },
+  {
+    icon: "🏞️",
+    title: "Pushkar",
+    detail: "15 km away",
+    photos: ["pushkar-1.jpg", "pushkar-2.jpg"],
+  },
+  {
+    icon: "🏙️",
     title: "Main City Location",
     detail: "In the heart of Ajmer",
-    photos: ["city-1.jpg", "dargah-3.jpg"],
+    photos: ["city-1.jpg", "city-2.jpg"],
   },
 ];
 /* Photos shown in the Gallery section (files inside /public/images/) */
