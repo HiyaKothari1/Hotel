@@ -53,7 +53,7 @@ export default function FindUs() {
             rel="noopener noreferrer"
             aria-label="WhatsApp"
           >
-            💬
+           <i className="fa-brands fa-whatsapp" style={{ color: "#25D366" }}></i> 
           </a>
         </div>
       </footer>

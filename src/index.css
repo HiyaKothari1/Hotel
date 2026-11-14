@@ -159,7 +159,7 @@ img { max-width: 100%; display: block; }
 .dot { width: 12px; height: 12px; border-radius: 50%; background: #dccdb9; transition: .2s; }
 .dot.active { background: var(--brown-900); }
 
-/* ---------- QUOTE ---------- */
+/* ---------- UOTE ---------- */
 .quote-banner {
   position: relative;
   padding: clamp(28px, 8vw, 40px) var(--side); text-align: right; color: #fff;
@@ -219,7 +219,7 @@ img { max-width: 100%; display: block; }
 .round-btn { width: clamp(56px, 17vw, 78px); height: 48px; border-radius: 16px; display: grid; place-items: center; font-size: 1.3rem; }
 .round-btn:active { transform: scale(.95); }
 .round-btn.call { background: var(--gold); border: 1px solid #c9a676; }
-.round-btn.wa { background: var(--green); color: #fff; }
+.round-btn.wa { background: var(--gold-soft); color: #1fa52d; }
 /* ---------- TABLET / DESKTOP ---------- */
 @media (min-width: 768px) {
   .menu-btn { display: none; }

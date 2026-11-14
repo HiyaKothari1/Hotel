@@ -42,7 +42,7 @@ export default function Hero() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            💬 WhatsApp Us
+             <i className="fa-brands fa-whatsapp" style={{ color: "#25D366" }}></i>WhatsApp Us
           </a>
         </div>
       </div>
