@@ -446,3 +446,16 @@ img { max-width: 100%; display: block; }
 
 .attraction h3 { font-size: clamp(1.05rem, 4.6vw, 1.35rem); }
 .attraction p { font-size: clamp(.78rem, 3.3vw, .95rem); }
+/* Laptop/desktop: no slideshow, only the first photo (hero.jpg) */
+@media (min-width: 768px) {
+  .hero-slide { display: none; }
+  .hero-slide:first-child { display: block; opacity: 1 !important; }
+}
+/* Laptop/desktop: gallery in pairs, 2 photos per row */
+@media (min-width: 768px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); max-width: 800px; }
+  /* if the last row has a single photo, centre it */
+  .gallery-item:last-child:nth-child(odd) {
+    grid-column: 1 / -1; width: calc(50% - 8px); justify-self: center;
+  }
+}

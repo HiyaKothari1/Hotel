@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { gallery } from "../data/site.js";
 
 const src = (file) => `${import.meta.env.BASE_URL}images/${file}`;
@@ -22,7 +23,7 @@ export default function Gallery() {
   }, [open]);
 
   return (
-    <section className="gallery" id="gallery">
+    <section className="photo-gallery" id="gallery">
       <h2 className="section-title">
         <span>Gallery</span>
       </h2>
@@ -44,31 +45,33 @@ export default function Gallery() {
         ))}
       </div>
 
-      {open !== null && (
-        <div className="lightbox" onClick={close}>
-          <button className="lb-btn lb-close" onClick={close} aria-label="Close">
-            ✕
-          </button>
-          <button
-            className="lb-btn lb-prev"
-            onClick={(e) => { e.stopPropagation(); prev(); }}
-            aria-label="Previous photo"
-          >
-            ‹
-          </button>
-          <figure className="lb-figure" onClick={(e) => e.stopPropagation()}>
-            <img src={src(gallery[open].file)} alt={gallery[open].caption} />
-            <figcaption>{gallery[open].caption}</figcaption>
-          </figure>
-          <button
-            className="lb-btn lb-next"
-            onClick={(e) => { e.stopPropagation(); next(); }}
-            aria-label="Next photo"
-          >
-            ›
-          </button>
-        </div>
-      )}
+      {open !== null &&
+        createPortal(
+          <div className="lightbox" onClick={close}>
+            <button className="lb-btn lb-close" onClick={close} aria-label="Close">
+              ✕
+            </button>
+            <button
+              className="lb-btn lb-prev"
+              onClick={(e) => { e.stopPropagation(); prev(); }}
+              aria-label="Previous photo"
+            >
+              ‹
+            </button>
+            <figure className="lb-figure" onClick={(e) => e.stopPropagation()}>
+              <img src={src(gallery[open].file)} alt={gallery[open].caption} />
+              <figcaption>{gallery[open].caption}</figcaption>
+            </figure>
+            <button
+              className="lb-btn lb-next"
+              onClick={(e) => { e.stopPropagation(); next(); }}
+              aria-label="Next photo"
+            >
+              ›
+            </button>
+          </div>,
+          document.body
+        )}
     </section>
   );
 }
