@@ -4,6 +4,8 @@ import Features from "./components/Features.jsx";
 import Rooms from "./components/Rooms.jsx";
 import QuoteBanner from "./components/QuoteBanner.jsx";
 import FindUs from "./components/FindUs.jsx";
+import Attractions from "./components/Attractions.jsx";
+import Gallery from "./components/Gallery.jsx";
 
 export default function App() {
   return (
@@ -12,7 +14,9 @@ export default function App() {
       <main>
         <Hero />
         <Features />
+        <Attractions />
         <Rooms />
+        <Gallery />
         <QuoteBanner />
       </main>
       <FindUs />

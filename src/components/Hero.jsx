@@ -1,18 +1,27 @@
-import { hotel, images } from "../data/site.js";
-import { photoBg } from "../utils.js";
+import { useEffect, useState } from "react";
+import { hotel, heroSlides } from "../data/site.js";
 
 export default function Hero() {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((i) => (i + 1) % heroSlides.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <section
-      className="hero"
-      id="home"
-      style={{
-        backgroundImage: photoBg(
-          images.hero,
-          "linear-gradient(120deg,#2b1b12 0%,#6b4a30 55%,#b98a58 100%)"
-        ),
-      }}
-    >
+    <section className="hero" id="home">
+      {heroSlides.map((file, i) => (
+        <div
+          key={file}
+          className={`hero-slide${i === current ? " active" : ""}`}
+          style={{
+            backgroundImage: `url(${import.meta.env.BASE_URL}images/${file})`,
+          }}
+        />
+      ))}
       <div className="hero-overlay" />
       <div className="hero-content">
         <p className="eyebrow">WELCOME TO</p>

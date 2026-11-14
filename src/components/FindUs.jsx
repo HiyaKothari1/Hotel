@@ -25,7 +25,7 @@ export default function FindUs() {
         </div>
         <a
           className="map-open"
-          href="https://www.google.com/maps/search/?api=1&query=26.465988,74.626572"
+          href="https://www.google.com/maps?cid=802845346562611073"
           target="_blank"
           rel="noopener noreferrer"
         >
