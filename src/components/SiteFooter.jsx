@@ -14,21 +14,24 @@ export default function SiteFooter() {
   const [logoOk, setLogoOk] = useState(true);
   const ref = useRef(null);
 
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    el.classList.add("sf-wait");
+    useEffect(() => {
+    const root = ref.current;
+    if (!root) return;
+    const items = root.querySelectorAll(".sf-inner > *");
+    items.forEach((n) => n.classList.add("sf-r"));
+
     const io = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          el.classList.remove("sf-wait");
-          el.classList.add("in");
-          io.disconnect();
-        }
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add("sf-in");
+            io.unobserve(e.target);
+          }
+        });
       },
-      { threshold: 0.15 }
+      { threshold: 0.35, rootMargin: "0px 0px -6% 0px" }
     );
-    io.observe(el);
+    items.forEach((n) => io.observe(n));
     return () => io.disconnect();
   }, []);
 

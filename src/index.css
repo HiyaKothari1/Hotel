@@ -605,20 +605,14 @@ img { max-width: 100%; display: block; }
 .site-footer :focus-visible { outline-color: var(--gold); }
 /* ---------- FOOTER ANIMATIONS ---------- */
 
-/* 1. scroll par ek-ek karke upar uthna */
-.site-footer.sf-wait .sf-inner > * { opacity: 0; }
-.site-footer.in .sf-inner > * { animation: sfUp .8s ease backwards; }
-.site-footer.in .sf-inner > :nth-child(2) { animation-delay: .1s; }
-.site-footer.in .sf-inner > :nth-child(3) { animation-delay: .2s; }
-.site-footer.in .sf-inner > :nth-child(4) { animation-delay: .3s; }
-.site-footer.in .sf-inner > :nth-child(5) { animation-delay: .4s; }
-.site-footer.in .sf-inner > :nth-child(6) { animation-delay: .5s; }
-.site-footer.in .sf-inner > :nth-child(7) { animation-delay: .6s; }
-.site-footer.in .sf-inner > :nth-child(8) { animation-delay: .7s; }
-@keyframes sfUp {
-  from { opacity: 0; transform: translateY(18px); }
-  to   { opacity: 1; transform: none; }
+/* 1. har cheez tab upar uthe jab wo screen mein aaye */
+.sf-r {
+  opacity: 0; transform: translateY(22px);
+  transition: opacity .9s ease, transform .9s ease;
 }
+.sf-r.sf-in { opacity: 1; transform: none; }
+.sf-pill.sf-in { transition: opacity 1.3s ease, transform .2s; }
+.sf-pill.sf-in:hover { transform: translateY(-2px); }
 
 /* 2. chhatri ke peeche ki roshni ka dheere saans lena */
 .site-footer::before {
@@ -645,8 +639,7 @@ img { max-width: 100%; display: block; }
 
 /* jinhone phone mein "reduce motion" on rakha hai unke liye sab band */
 @media (prefers-reduced-motion: reduce) {
-  .site-footer.sf-wait .sf-inner > * { opacity: 1; }
-  .site-footer.in .sf-inner > *,
+  .sf-r { opacity: 1; transform: none; }
   .site-footer::before,
   .sf-pill::after,
   .sf-divider svg { animation: none; }
