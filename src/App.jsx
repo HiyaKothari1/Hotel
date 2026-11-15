@@ -7,6 +7,7 @@ import FindUs from "./components/FindUs.jsx";
 import Attractions from "./components/Attractions.jsx";
 import Gallery from "./components/Gallery.jsx";
 import ScrollFX from "./components/ScrollFX.jsx";
+import SiteFooter from "./components/SiteFooter.jsx";
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
         <QuoteBanner />
       </main>
       <FindUs />
+      <SiteFooter />
     </>
   );
 }

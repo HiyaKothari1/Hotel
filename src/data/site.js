@@ -7,6 +7,11 @@ export const hotel = {
   phone: "918619602317",
   address: "Ajmer, Rajasthan – 305001",
   quote: "A Stay That Feels Like Home",
+  parent: "A unit of Hotel Moon Bow",
+  email: "hoteludpalace@gmail.com",
+  instagram: "https://www.instagram.com/hoteludpalace?obrf=MXRxOXF5dDBjZGRiZQ%3D%3D",  
+  emergency: "919929733667", 
+  address: "Pushkar Road, Ajmer, Rajasthan – 305001",
 };
 export const images = {
   hero: "hero.jpg",
