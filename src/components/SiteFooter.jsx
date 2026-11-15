@@ -36,7 +36,13 @@ export default function SiteFooter() {
   }, []);
 
   return (
-    <footer className="site-footer" ref={ref}>
+    <footer
+    className="site-footer"
+    ref={ref}
+    style={{
+        backgroundImage: `linear-gradient(rgba(25,14,9,.25), rgba(25,14,9,.25)), url(${import.meta.env.BASE_URL}images/footer-bg.jpg)`,
+    }}
+    >
       <svg className="sf-chhatri" viewBox="0 0 200 260" aria-hidden="true">
         <rect x="98" y="6" width="4" height="26" />
         <circle cx="100" cy="8" r="5" />

@@ -516,10 +516,15 @@ img { max-width: 100%; display: block; }
 .site-footer {
   position: relative; overflow: hidden; text-align: center;
   color: var(--cream);
-  padding: 44px var(--side) 0;
-  background:
-    radial-gradient(60% 38% at 90% 6%, rgba(214,132,64,.5), transparent 72%),
-    linear-gradient(180deg, #2e1b13 0%, #2a1811 60%, #1f120c 100%);
+  padding: 44px var(--side) 36px;
+  background-color: #1f120c;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right top;
+}
+
+@media (min-width: 768px) {
+  .site-footer { background-position: center 10%; }
 }
 .sf-chhatri {
   position: absolute; top: 26px; right: -10px;
@@ -643,4 +648,15 @@ img { max-width: 100%; display: block; }
   .site-footer::before,
   .sf-pill::after,
   .sf-divider svg { animation: none; }
+}
+/* ---------- GALLERY SCROLL REVEAL ---------- */
+.gallery-item.g-r {
+  opacity: 0; transform: translateY(28px) scale(.97);
+  transition: opacity .9s ease, transform .9s ease;
+}
+.gallery-item.g-r.g-in { opacity: 1; transform: none; }
+.gallery-item.g-r:nth-child(even) { transition-delay: .15s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-item.g-r { opacity: 1; transform: none; transition: none; }
 }
