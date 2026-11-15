@@ -53,13 +53,11 @@ export default function Rooms() {
         Choose from our well-designed, cozy and spacious rooms.
       </Reveal>
 
-      <Reveal delay={200}>
-        <div className="carousel" ref={trackRef} onScroll={handleScroll}>
-          {rooms.map((room) => (
-            <RoomCard key={room.id} room={room} onSelect={openRoom} />
-          ))}
-        </div>
-      </Reveal>
+      <div className="carousel" ref={trackRef} onScroll={handleScroll}>
+        {rooms.map((room) => (
+          <RoomCard key={room.id} room={room} onSelect={openRoom} />
+        ))}
+      </div>
       <div className="dots" aria-hidden="true">
         {rooms.map((room, i) => (
           <span key={room.id} className={`dot ${i === active ? "active" : ""}`} />
