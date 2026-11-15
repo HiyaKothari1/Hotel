@@ -109,7 +109,7 @@ export default function SiteFooter() {
 
         <a
           className="sf-insta"
-          href={`https://instagram.com/${hotel.instagram}`}
+          href={`${hotel.instagram}`}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram par follow karein"

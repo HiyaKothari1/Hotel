@@ -5,7 +5,6 @@ export const hotel = {
   tagline: "COMFORT & HOSPITALITY",
   // Country code + number, no spaces or "+"  (used for Call and WhatsApp)
   phone: "918619602317",
-  address: "Ajmer, Rajasthan – 305001",
   quote: "A Stay That Feels Like Home",
   parent: "A unit of Hotel Moon Bow",
   email: "hoteludpalace@gmail.com",
