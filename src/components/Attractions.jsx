@@ -1,3 +1,4 @@
+import Reveal from "./Reveal.jsx";
 import { useEffect, useState } from "react";
 import { attractions } from "../data/site.js";
 
@@ -37,15 +38,19 @@ function AttractionCard({ a, delay }) {
 export default function Attractions() {
   return (
     <section className="attractions" id="nearby">
-      <h2 className="section-title">
+            <Reveal as="h2" className="section-title">
         <span>Why Stay Here</span>
-      </h2>
-      <p className="section-sub">Close to the best of Ajmer.</p>
+      </Reveal>
+      <Reveal as="p" className="section-sub" delay={120}>
+        Close to the best of Ajmer.
+      </Reveal>
 
       <div className="attraction-grid">
         {attractions.map((a, i) => (
-          <AttractionCard key={a.title} a={a} delay={4000 + i * 700} />
-        ))}
+        <Reveal key={a.title} delay={(i % 2) * 150}>
+          <AttractionCard a={a} delay={4000 + i * 700} />
+        </Reveal>
+      ))}
       </div>
     </section>
   );

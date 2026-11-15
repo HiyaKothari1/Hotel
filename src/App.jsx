@@ -6,17 +6,20 @@ import QuoteBanner from "./components/QuoteBanner.jsx";
 import FindUs from "./components/FindUs.jsx";
 import Attractions from "./components/Attractions.jsx";
 import Gallery from "./components/Gallery.jsx";
+import ScrollFX from "./components/ScrollFX.jsx";
 
 export default function App() {
   return (
     <>
+      <ScrollFX />
       <Header />
       <main>
         <Hero />
         <Features />
-        <Attractions />
         <Rooms />
         <Gallery />
+        <Attractions />
+        
         <QuoteBanner />
       </main>
       <FindUs />

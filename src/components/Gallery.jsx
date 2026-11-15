@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { gallery } from "../data/site.js";
+import Reveal from "./Reveal.jsx";
 
 const src = (file) => `${import.meta.env.BASE_URL}images/${file}`;
 
@@ -24,10 +25,12 @@ export default function Gallery() {
 
   return (
     <section className="photo-gallery" id="gallery">
-      <h2 className="section-title">
+      <Reveal as="h2" className="section-title">
         <span>Gallery</span>
-      </h2>
-      <p className="section-sub">A glimpse of UD Palace.</p>
+      </Reveal>
+      <Reveal as="p" className="section-sub" delay={120}>
+        A glimpse of UD Palace.
+      </Reveal>
 
       <div className="gallery-grid">
         {gallery.map((g, i) => (
@@ -58,10 +61,18 @@ export default function Gallery() {
             >
               ‹
             </button>
-            <figure className="lb-figure" onClick={(e) => e.stopPropagation()}>
-              <img src={src(gallery[open].file)} alt={gallery[open].caption} />
-              <figcaption>{gallery[open].caption}</figcaption>
-            </figure>
+              <Reveal
+                as="figure"
+                className={`gallery-item ${i % 2 === 0 ? "from-left" : "from-right"}`}
+                key={g.file}
+                role="button"
+                tabIndex={0}
+                onClick={() => setOpen(i)}
+                onKeyDown={(e) => e.key === "Enter" && setOpen(i)}
+              >
+                <img src={src(g.file)} alt={g.caption} loading="lazy" />
+                <figcaption>{g.caption}</figcaption>
+              </Reveal>
             <button
               className="lb-btn lb-next"
               onClick={(e) => { e.stopPropagation(); next(); }}

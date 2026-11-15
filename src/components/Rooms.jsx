@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { rooms } from "../data/site.js";
 import RoomCard from "./RoomCard.jsx";
 import RoomModal from "./RoomModal.jsx";
+import Reveal from "./Reveal.jsx";
 
 export default function Rooms() {
   const trackRef = useRef(null);
@@ -45,19 +46,20 @@ export default function Rooms() {
 
   return (
     <section className="rooms" id="rooms">
-      <h2 className="section-title">
+            <Reveal as="h2" className="section-title">
         <span>Our Rooms</span>
-      </h2>
-      <p className="section-sub">
+      </Reveal>
+      <Reveal as="p" className="section-sub" delay={120}>
         Choose from our well-designed, cozy and spacious rooms.
-      </p>
+      </Reveal>
 
-      <div className="carousel" ref={trackRef} onScroll={handleScroll}>
-        {rooms.map((room) => (
-          <RoomCard key={room.id} room={room} onSelect={openRoom} />
-        ))}
-      </div>
-
+      <Reveal delay={200}>
+        <div className="carousel" ref={trackRef} onScroll={handleScroll}>
+          {rooms.map((room) => (
+            <RoomCard key={room.id} room={room} onSelect={openRoom} />
+          ))}
+        </div>
+      </Reveal>
       <div className="dots" aria-hidden="true">
         {rooms.map((room, i) => (
           <span key={room.id} className={`dot ${i === active ? "active" : ""}`} />

@@ -1,5 +1,5 @@
-import { hotel, images } from "../data/site.js";
-import { photoBg } from "../utils.js";
+import { hotel } from "../data/site.js";
+import Reveal from "./Reveal.jsx";
 
 export default function QuoteBanner() {
   return (
@@ -7,8 +7,8 @@ export default function QuoteBanner() {
       className="quote-banner"
       style={{ backgroundImage: "linear-gradient(120deg,#3a2618,#8a6238)" }}
     >
-      <p>“{hotel.quote}”</p>
-      <hr />
+      <Reveal as="p" className="zoom">“{hotel.quote}”</Reveal>
+      <Reveal as="hr" delay={250} />
     </section>
   );
 }
