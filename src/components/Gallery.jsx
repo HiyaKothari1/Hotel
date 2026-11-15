@@ -63,15 +63,16 @@ export default function Gallery() {
             </button>
               <Reveal
                 as="figure"
-                className={`gallery-item ${i % 2 === 0 ? "from-left" : "from-right"}`}
-                key={g.file}
-                role="button"
-                tabIndex={0}
-                onClick={() => setOpen(i)}
-                onKeyDown={(e) => e.key === "Enter" && setOpen(i)}
+                className={`gallery-item ${
+                  open % 2 === 0 ? "from-left" : "from-right"
+                }`}
               >
-                <img src={src(g.file)} alt={g.caption} loading="lazy" />
-                <figcaption>{g.caption}</figcaption>
+                <img
+                  src={src(gallery[open].file)}
+                  alt={gallery[open].caption}
+                  loading="eager"
+                />
+                <figcaption>{gallery[open].caption}</figcaption>
               </Reveal>
             <button
               className="lb-btn lb-next"
