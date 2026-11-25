@@ -109,7 +109,7 @@ export const rooms = [
     tagline: "Max 3 adults · 1 free extra bed",
     description:
       "A bright, airy room with a plush double bed, warm wooden finishes and soft ambient ceiling lights. A comfortable, calm stay in the heart of Ajmer. One extra bed can be added for one person at no charge.",
-    price: 1199,
+    price: 199,
     thumb: "rooms/suite-thumb.jpg",
     images: ["rooms/suite-1.jpg", "rooms/suite-2.jpg"],
     focus: "center 62%",
