@@ -43,6 +43,8 @@ export default function Header() {
       <nav className={`nav ${open ? "open" : ""}`}>
         <a href="#home" onClick={close}>Home</a>
         <a href="#rooms" onClick={close}>Rooms</a>
+        <a href="#gallery" onClick={close}>Gallery</a>
+        <a href="#nearby" onClick={close}>Nearby</a>
         <a href="#map" onClick={close}>Map</a>
       </nav>
     </header>
