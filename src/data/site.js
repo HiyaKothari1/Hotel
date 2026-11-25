@@ -13,6 +13,7 @@ export const hotel = {
   address: "Pushkar Road, Ajmer, Rajasthan – 305001",
   parkingNote:
     "Free open parking is available outside the property. Fully covered parking is available at an additional charge.",
+  priceNote:"Seasonal rates may vary. Contact us for the latest pricing."  
 };
 export const images = {
   hero: "hero.jpg",

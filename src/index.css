@@ -663,10 +663,20 @@ img { max-width: 100%; display: block; }
 .parking-note {
   margin: 14px clamp(14px, 5vw, 24px) 0;
   text-align: center;
-  font-size: clamp(.78rem, 3.4vw, .9rem);
+  font-size: clamp(.6rem, 2.5vw, .7rem);
   line-height: 1.5;
   color: var(--brown-700);
 }
 @media (min-width: 700px) {
   .parking-note { max-width: 900px; margin-inline: auto; }
+}
+.price-note {
+  
+  text-align: center;
+  font-size: clamp(.4rem, 2vw, .5rem);
+  line-height: 1;
+  color: var(--brown-700);
+}
+@media (min-width: 700px) {
+  .price-note { max-width: 900px; margin-inline: auto; }
 }

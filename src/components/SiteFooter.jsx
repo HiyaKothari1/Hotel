@@ -103,7 +103,7 @@ export default function SiteFooter() {
         </a>
 
         <a className="sf-emergency" href={`tel:+${hotel.emergency}`}>
-          Emergency Contact: {fmt(hotel.emergency)}
+          Managing Director: {fmt(hotel.emergency)}
         </a>
 
         <a

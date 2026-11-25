@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import { rooms } from "../data/site.js";
+import { rooms,hotel } from "../data/site.js";
 import RoomCard from "./RoomCard.jsx";
 import RoomModal from "./RoomModal.jsx";
 import Reveal from "./Reveal.jsx";
+
 
 export default function Rooms() {
   const trackRef = useRef(null);
@@ -58,13 +59,18 @@ export default function Rooms() {
           <RoomCard key={room.id} room={room} onSelect={openRoom} />
         ))}
       </div>
+      <p className="price-note">* {hotel.priceNote}</p>
+
       <div className="dots" aria-hidden="true">
         {rooms.map((room, i) => (
           <span key={room.id} className={`dot ${i === active ? "active" : ""}`} />
         ))}
       </div>
+     
 
       {selected && <RoomModal room={selected} onClose={closeRoom} />}
+      
     </section>
+    
   );
 }
