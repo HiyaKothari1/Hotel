@@ -141,7 +141,7 @@ export const rooms = [
     tagline: "Double + single bed · Max 4 guests",
     description:
       "A roomy option for small groups and families, with one double bed and one single bed that comfortably sleep 3 adults. One extra bed can be added for free, taking the room to a maximum of 4 guests.",
-    price: 1599,
+    price: 1749,
     images: [
       "rooms/large-twin-1.jpg",
       "rooms/large-twin-2.jpg",
