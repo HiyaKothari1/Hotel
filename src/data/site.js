@@ -11,6 +11,8 @@ export const hotel = {
   instagram: "https://www.instagram.com/hoteludpalace?obrf=MXRxOXF5dDBjZGRiZQ%3D%3D",  
   emergency: "919929733667", 
   address: "Pushkar Road, Ajmer, Rajasthan – 305001",
+  parkingNote:
+    "Free open parking is available outside the property. Fully covered parking is available at an additional charge.",
 };
 export const images = {
   hero: "hero.jpg",
