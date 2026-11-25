@@ -74,12 +74,7 @@ export default function SiteFooter() {
           A place where comfort meets warmth and heritage in Ajmer.
         </p>
 
-        <div className="sf-contact">
-          <a href={`tel:+${hotel.phone}`}>
-            <PhoneIcon />
-            {fmt(hotel.phone)}
-          </a>
-          <span className="sf-sep" aria-hidden="true" />
+                <div className="sf-contact">
           <a href={`mailto:${hotel.email}`}>
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <rect x="3" y="5" width="18" height="14" rx="2" />
@@ -89,7 +84,7 @@ export default function SiteFooter() {
           </a>
         </div>
 
-        <a className="sf-pill" href={`tel:+${hotel.emergency}`}>
+        <a className="sf-pill" href={`tel:+${hotel.phone}`}>
           <span className="sf-pill-label">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M5 18a7 7 0 0 1 14 0" />
@@ -98,13 +93,17 @@ export default function SiteFooter() {
               <circle cx="12" cy="6.8" r="1.2" />
               <path d="M2 21h20" />
             </svg>
-            Emergency Contact
+            Contact Us
           </span>
           <span className="sf-pill-line" aria-hidden="true" />
           <span className="sf-pill-num">
             <PhoneIcon />
-            {fmt(hotel.emergency)}
+            {fmt(hotel.phone)}
           </span>
+        </a>
+
+        <a className="sf-emergency" href={`tel:+${hotel.emergency}`}>
+          Emergency Contact: {fmt(hotel.emergency)}
         </a>
 
         <a
