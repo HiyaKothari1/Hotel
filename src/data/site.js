@@ -157,7 +157,7 @@ export const rooms = [
     tagline: "Double bed · Mini fridge · Max 3 adults",
     description:
       "A comfortable room with a double bed and a mini fridge. Up to 3 adults can stay, with one extra bed added for free.",
-    price: 1499,
+    price: 1599,
     images: [
       "rooms/superior-king-1.jpg",
       "rooms/superior-king-2.jpg",
