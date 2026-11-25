@@ -173,7 +173,7 @@ export const rooms = [
     tagline: "3 double beds · Max 7 guests",
     description:
       "Our largest room, made for big families and groups, with 3 double beds. Up to 7 guests can stay, including one extra bed that can be added for free.",
-    price: 2499,
+    price: 2799,
     images: ["rooms/family-double-1.jpg", "rooms/family-double-2.jpg","rooms/family-double-3.jpg", "rooms/family-double-4.jpg"],
     fallback: "linear-gradient(135deg,#8a5f3a,#d9b98c)",
     facts: ["🛏️ 3 double beds", "👥 Max 7 guests", "➕ 1 extra bed free"],
@@ -185,7 +185,7 @@ export const rooms = [
     tagline: "Max 5 adults · Non-AC for now",
     description:
       "A simple, budget-friendly room for groups of friends or family, with space for up to 5 adults including one extra bed at no charge.",
-    price: 1199,
+    price: 1799,
     images: [
       "rooms/classic-quadruple-1.jpg",
       "rooms/classic-quadruple-2.jpg",
