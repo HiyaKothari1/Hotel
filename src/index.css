@@ -660,3 +660,13 @@ img { max-width: 100%; display: block; }
 @media (prefers-reduced-motion: reduce) {
   .gallery-item.g-r { opacity: 1; transform: none; transition: none; }
 }
+.parking-note {
+  margin: 14px clamp(14px, 5vw, 24px) 0;
+  text-align: center;
+  font-size: clamp(.78rem, 3.4vw, .9rem);
+  line-height: 1.5;
+  color: var(--brown-700);
+}
+@media (min-width: 700px) {
+  .parking-note { max-width: 900px; margin-inline: auto; }
+}
